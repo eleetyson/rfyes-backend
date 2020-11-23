@@ -19,9 +19,9 @@ class IdeasController < ApplicationController
   end
 
 # GET /ideas
-# returns information for all memes
+# returns information for all memes (in random order)
   def index
-    ideas = Idea.all
+    ideas = Idea.all.shuffle
 
     if ideas
       render json: ideas, except: [:created_at, :updated_at]
