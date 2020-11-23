@@ -6,7 +6,7 @@ class IdeasController < ApplicationController
     redirect_to idea_path(id)
   end
 
-# /ideas/:id
+# GET /ideas/:id
 # returns information for a specific idea
   def show
     idea = Idea.find_by(id: params[:id])
@@ -18,7 +18,7 @@ class IdeasController < ApplicationController
     end
   end
 
-# /ideas
+# GET /ideas
 # returns information for all memes
   def index
     ideas = Idea.all
@@ -30,10 +30,10 @@ class IdeasController < ApplicationController
     end
   end
 
-# /ideas/new
+# POST /ideas
   def create
     idea = Idea.new(idea_params)
-    
+
     if idea.save
       render json: { message: 'Success' }
     else
