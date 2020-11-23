@@ -21,11 +21,29 @@ class IdeasController < ApplicationController
 # /ideas
 # returns information for all memes
   def index
+    ideas = Idea.all
 
+    if ideas
+      render json: ideas, except: [:created_at, :updated_at]
+    else
+      render json: { message: 'An unexpected error occurred.' }
+    end
   end
 
 # /ideas/new
   def create
+    idea = Idea.new(idea_params)
+    
+    if idea.save
+      render json: { message: 'Success' }
+    else
+      render json: { message: 'An unexpected error occurred.' }
+    end
+  end
 
+  private
+
+  def idea_params
+    params.require(:idea).permit(:title, :content, :source, :link)
   end
 end
