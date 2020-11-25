@@ -30,6 +30,39 @@ class IdeasController < ApplicationController
     end
   end
 
+# GET /rfs
+  def rfs
+    ideas = Idea.where("source like ?", "%" + "RFS" + "%").shuffle
+
+    if ideas
+      render json: ideas, except: [:created_at, :updated_at]
+    else
+      render json: { message: 'An unexpected error occurred.' }
+    end
+  end
+
+# GET /mfm
+  def mfm
+    ideas = Idea.where("source like ?", "%" + "My First Million" + "%").shuffle
+
+    if ideas
+      render json: ideas, except: [:created_at, :updated_at]
+    else
+      render json: { message: 'An unexpected error occurred.' }
+    end
+  end
+
+# GET /twitter
+  def twitter
+    ideas = Idea.where("source like ?", "%" + "Twitter" + "%").shuffle
+
+    if ideas
+      render json: ideas, except: [:created_at, :updated_at]
+    else
+      render json: { message: 'An unexpected error occurred.' }
+    end
+  end
+
 # POST /ideas
   def create
     idea = Idea.new(idea_params)
