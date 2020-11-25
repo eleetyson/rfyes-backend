@@ -22,45 +22,25 @@ class IdeasController < ApplicationController
 # returns information for all memes (in random order)
   def index
     ideas = Idea.all.shuffle
-
-    if ideas
-      render json: ideas, except: [:created_at, :updated_at]
-    else
-      render json: { message: 'An unexpected error occurred.' }
-    end
+    render_ideas(ideas)
   end
 
 # GET /rfs
   def rfs
     ideas = Idea.where("source like ?", "%" + "RFS" + "%").shuffle
-
-    if ideas
-      render json: ideas, except: [:created_at, :updated_at]
-    else
-      render json: { message: 'An unexpected error occurred.' }
-    end
+    render_ideas(ideas)
   end
 
 # GET /mfm
   def mfm
     ideas = Idea.where("source like ?", "%" + "My First Million" + "%").shuffle
-
-    if ideas
-      render json: ideas, except: [:created_at, :updated_at]
-    else
-      render json: { message: 'An unexpected error occurred.' }
-    end
+    render_ideas(ideas)
   end
 
 # GET /twitter
   def twitter
     ideas = Idea.where("source like ?", "%" + "Twitter" + "%").shuffle
-
-    if ideas
-      render json: ideas, except: [:created_at, :updated_at]
-    else
-      render json: { message: 'An unexpected error occurred.' }
-    end
+    render_ideas(ideas)
   end
 
 # POST /ideas
@@ -76,7 +56,16 @@ class IdeasController < ApplicationController
 
   private
 
+  def render_ideas(ideas)
+    if ideas
+      render json: ideas, except: [:created_at, :updated_at]
+    else
+      render json: { message: 'An unexpected error occurred.' }
+    end
+  end
+
   def idea_params
     params.require(:idea).permit(:title, :content, :source, :link)
   end
+
 end
