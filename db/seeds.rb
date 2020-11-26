@@ -45,6 +45,14 @@ Idea.find_by(title: "Authentic dating app") || Idea.create(title: "Authentic dat
 
 Idea.find_by(title: "XPRIZE for large companies") || Idea.create(title: "XPRIZE for large companies", content: "XPrize puts up large cash prizes for the best solutions to big, hairy problems. Instead of dedicating resources indefinitely, enterprises could offer XPRIZE-esque bounties -- a fixed amount -- for anyone outside of the organization to help them overcome a daunting internal obstacle. More shots on goal tends to offer a greater likelihood of scoring.", source: "My First Million podcast (Shaan Puri)", link: "https://open.spotify.com/episode/0KzKdYdWP55vtcR8Wv2Zzx?si=_D6KLRGaRlOQvUH7hsaNcg")
 
+Idea.find_by(title: "Information wants to be free") || Idea.create(title: "Information wants to be free", content: "This is the framework: take an old, stodgy industry with incomplete or fragmented information and create a platform aggregating that information. Pitchbook does this with private company funding but there are plenty of spaces (legal, health care, auto repair) where customers just have no idea whether they're getting a fair deal.", source: "My First Million podcast (Shaan Puri)", link: "https://open.spotify.com/episode/54tWVzkHKFtDVhXVc5P4QE?si=zb6QJW10SRCBQChkGsd8lg")
+
+Idea.find_by(title: "X for women") || Idea.create(title: "X for women", content: "Bumble, The Wing, and Ellevest are all examples of products re-invented with a focus on the female customer. We don't always have to innovate on technology or business model -- remixing something old with modern, focused branding can be extremely profitable.", source: "My First Million podcast (Sam Parr)", link: "https://open.spotify.com/episode/3iJFQdouOWd1JuGKNNgzIY?si=F8AJxCcQT4e1FJdBada_Mw")
+
+Idea.find_by(title: "Customer service as a service") || Idea.create(title: "Customer service as a service", content: "Demand for customer support is dynamic, it would be nice if you could scale your support team up or down with that demand. A marketplace of older people would allow for on-demand support for startups and flexible work for retired adults that want to work a little, but not a lot. It's AWS for customer service.", source: "My First Million podcast (Jonathon Barkl)", link: "https://open.spotify.com/episode/32W7cIH9EMpt0tNzHsO5mw?si=5La3IRD5TDeLJvUJs6Re4g")
+
+Idea.find_by(title: "Internal company newspaper") || Idea.create(title: "Internal company newspaper", content: "Software to spin up a centralized place for company memos, all-hands recordings, and org structure is an interesting concept. Stripe and AirBnb are each building this internally but some type of subscription product could help most large companies with internal comms.", source: "My First Million podcast (Sam Parr)", link: "https://open.spotify.com/episode/7mgLpelCZFlHF33pc9A1J6?si=8r4iuUrDSXOgVAHlxwEv5Q")
+
 
 # Twitter
 # Idea.find_by(title: "") || Idea.create(title: "", content: "", source: "", link: "")
