@@ -1,4 +1,4 @@
-Idea.delete_all
+# Idea.delete_all
 
 # RFS
 Idea.find_by(title: "Marketplace for buying and selling small businesses") || Idea.create(title: "Marketplace for buying and selling small businesses", content: "SMBs make up 99% of US businesses but right now, the process for buying and selling them lives mostly offline. As lifestyle businesses become more popular, a marketplace like this can facilitate financing and discovery to make owning one of these businesses possible.", source: "RFS 100 newsletter (Tina Jiang)", link: "https://rfs100.substack.com/p/avatars-chinese-e-commerce-and-tracking")
