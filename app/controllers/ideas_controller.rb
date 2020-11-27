@@ -51,6 +51,7 @@ class IdeasController < ApplicationController
   def create
     byebug
     # idea = Idea.new(idea_params)
+    # idea.source = "User submission (#{params[:idea][:person]})"
     #
     # if idea.save
     #   render json: { message: 'Success' }
@@ -69,9 +70,8 @@ class IdeasController < ApplicationController
     end
   end
 
-# maybe not source... that should always be: User submission (name...)
   def idea_params
-    params.require(:idea).permit(:title, :content, :source, :link)
+    params.require(:idea).permit(:title, :content, :link)
   end
 
 end
