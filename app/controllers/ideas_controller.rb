@@ -26,32 +26,37 @@ class IdeasController < ApplicationController
   end
 
 # GET /rfs
+# returns all ideas from this particular source: the RFS 100 newsletter
   def rfs
     ideas = Idea.where("source like ?", "%" + "RFS" + "%").shuffle
     render_ideas(ideas)
   end
 
 # GET /mfm
+# returns all ideas from this particular source: the My First Million podcast
   def mfm
     ideas = Idea.where("source like ?", "%" + "My First Million" + "%").shuffle
     render_ideas(ideas)
   end
 
 # GET /twitter
+# returns all ideas from this particular source: Twitter
   def twitter
     ideas = Idea.where("source like ?", "%" + "Twitter" + "%").shuffle
     render_ideas(ideas)
   end
 
 # POST /ideas
+# taking user form submission and creating an idea
   def create
-    idea = Idea.new(idea_params)
-
-    if idea.save
-      render json: { message: 'Success' }
-    else
-      render json: { message: 'An unexpected error occurred.' }
-    end
+    byebug
+    # idea = Idea.new(idea_params)
+    #
+    # if idea.save
+    #   render json: { message: 'Success' }
+    # else
+    #   render json: { message: 'An unexpected error occurred.' }
+    # end
   end
 
   private
@@ -64,6 +69,7 @@ class IdeasController < ApplicationController
     end
   end
 
+# maybe not source... that should always be: User submission (name...)
   def idea_params
     params.require(:idea).permit(:title, :content, :source, :link)
   end
