@@ -46,18 +46,24 @@ class IdeasController < ApplicationController
     render_ideas(ideas)
   end
 
+# GET /user
+# returns all ideas from this particular source: user-submitted
+  def user
+    ideas = Idea.where("source like ?", "%" + "User submission" + "%").shuffle
+    render_ideas(ideas)
+  end
+
 # POST /ideas
 # taking user form submission and creating an idea
   def create
-    byebug
-    # idea = Idea.new(idea_params)
-    # idea.source = "User submission (#{params[:idea][:person]})"
-    #
-    # if idea.save
-    #   render json: { message: 'Success' }
-    # else
-    #   render json: { message: 'An unexpected error occurred.' }
-    # end
+    idea = Idea.new(idea_params)
+    idea.source = "User submission (#{params[:idea][:person]})"
+
+    if idea.save
+      render json: { message: 'Your idea was successfully added :)' }
+    else
+      render json: { message: 'Unable to create your idea :)' }
+    end
   end
 
   private
