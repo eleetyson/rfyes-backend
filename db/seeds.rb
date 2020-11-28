@@ -1,4 +1,4 @@
-# Idea.delete_all
+Idea.delete_all
 
 # RFS
 Idea.find_by(title: "Marketplace for buying and selling small businesses") || Idea.create(title: "Marketplace for buying and selling small businesses", content: "SMBs make up 99% of US businesses but right now, the process for buying and selling them lives mostly offline. As lifestyle businesses become more popular, a marketplace like this can facilitate financing and discovery to make owning one of these businesses possible.", source: "RFS 100 newsletter (Tina Jiang)", link: "https://rfs100.substack.com/p/avatars-chinese-e-commerce-and-tracking")
@@ -87,7 +87,7 @@ Idea.find_by(title: "Career coaching for startup folks") || Idea.create(title: "
 
 Idea.find_by(title: "Calendar as a life log") || Idea.create(title: "Calendar as a life log", content: "Most of us use calendars proactively -- to plan ahead -- but they could also help with retroactively assessing how we've spent our time. A calendar product that pulls in screentime data (Zoom, Slack, Netflix), locations (Google Maps, Strava), and stress levels (Oura, Whoop, Apple Watch) would fit the bill.", source: "Twitter thread (Julian Lehr)", link: "https://twitter.com/lehrjulian/status/1259526773236215814?s=20")
 
-Idea.find_by(title: "Policy as a knowledge graph") || Idea.create(title: "Policy as a knowledge graph", content: "The concept is a poltical campaign site crossed with a Roam-style knowledge graph. Candidates always have a page with a grid of their stances on various issues. Instead of keeping each position on its own little island, it would be cool if they created a web of proposals illustrating the relationships between them.", source: "Twitter thread (Aaron Lewis)", link: "https://twitter.com/aaronzlewis/status/1265407688030248965?s=20")
+Idea.find_by(title: "Policy as a knowledge graph") || Idea.create(title: "Policy as a knowledge graph", content: "The concept is a political campaign site crossed with a Roam-style knowledge graph. Candidates always have a page with a grid of their stances on various issues. Instead of keeping each position on its own little island, it would be cool if they created a web of proposals illustrating the relationships between them.", source: "Twitter thread (Aaron Lewis)", link: "https://twitter.com/aaronzlewis/status/1265407688030248965?s=20")
 
 Idea.find_by(title: "Project management as Pokemon evolution") || Idea.create(title: "Project management as pokemon evolution", content: "Ideas don't go straight from 'to do' to 'done', they have intermediate stages. Instead of using boring, vague terms, we could describe these stages like we do evolving Pokemon. Ideas increase their power levels over time by shapeshifting into new mediums -- a Tweet becomes an essay, then a short video, then an interpretive dance and finally, a dank meme.", source: "Twitter thread (Aaron Lewis)", link: "https://twitter.com/aaronzlewis/status/1207323754906472448?s=20")
 
