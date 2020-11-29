@@ -1,4 +1,5 @@
 class IdeasController < ApplicationController
+  
 # root route - picks a random idea id to display and redirects to its show path
   def home
     ids = Idea.pluck(:id)
